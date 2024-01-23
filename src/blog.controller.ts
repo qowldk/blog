@@ -38,6 +38,7 @@ export class BlogController {
   deletePost(@Param('id') id: string) {
     console.log('게시글 삭제');
     this.blogService.delete(id);
+    return 'success';
   }
 
   @Put('/:id')
